@@ -35,12 +35,16 @@ void pop(){
 int precedence(char x){
     if(x=='(')
         return 0;
-    else if(x=='+'||x=='-')
+    else if(x=='-')
         return 1;
-    else if(x=='*'||x=='/')
+    else if(x=='+')
         return 2;
-    else if(x=='^')
+    else if(x=='*')
         return 3;
+    else if(x=='/')
+        return 4;
+    else if(x=='^')
+        return 5;
     return 0;
 }
 void infixTOpostfix(char var){
